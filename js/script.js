@@ -10,10 +10,17 @@ $(document).ready(function () {
             {
                 breakpoint: 768,
                 settings: {
-                    dots: true,
-                    arrows: false
+                    arrows: false,
+                    dots: true
                 }
-            }
+            },
+            {
+                breakpoint: 425,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            },
         ]
     });
 });
