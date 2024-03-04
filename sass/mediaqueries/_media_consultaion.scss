@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    .consultaion h2 {
+        text-align: center;
+    }
+    .consultaion {
+        &__descr {
+            text-align: center;
+        }
+        &__form_wrapper {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+}
+
+@media (max-width: 425px) {
+   
+}
