@@ -20,6 +20,8 @@
 @import 'blocks/carousel';
 @import 'blocks/catalog';
 @import 'blocks/footer';
+@import 'blocks/feed';
+@import 'blocks/modals';
 
 //media queries
 
@@ -28,3 +30,4 @@
 @import 'mediaqueries/media_consultaion';
 @import 'mediaqueries/media_carousel';
 @import 'mediaqueries/media_catalog';
+@import 'mediaqueries/media_feed';
