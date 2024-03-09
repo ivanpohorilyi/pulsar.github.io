@@ -95,4 +95,25 @@ $(document).ready(function () {
 
     $('input[name=phone]').mask("+38 (999) 999-9999");
 
+    $('form').submit(function (e) {
+        e.preventDefault();
+
+        // if (!$(this).valid()) {
+        //     return;
+        // }
+
+        $.ajax({
+            type: "POST",
+            //IF ERROR, CHECK THIS BELOW!!!!
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find('input').val('');
+            $('#consultaion, #order').fadeOut;
+            $('.overlay, #done').fadeIn;
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
 });
