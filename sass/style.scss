@@ -1,8 +1,13 @@
 @import 'base/variables';
+@import 'base/animations';
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -22,6 +27,7 @@
 @import 'blocks/footer';
 @import 'blocks/feed';
 @import 'blocks/modals';
+@import 'blocks/pageup';
 
 //media queries
 
