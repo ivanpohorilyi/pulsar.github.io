@@ -1,3 +1,6 @@
+
+// slider
+
 $(document).ready(function () {
     $('.carousel__inner').slick({
         speed: 300,
@@ -24,6 +27,8 @@ $(document).ready(function () {
         ]
     });
 
+// tabs
+
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function () {
         $(this)
             .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
@@ -44,7 +49,7 @@ $(document).ready(function () {
     toggleSlidesItem('.catalog-item__link');
     toggleSlidesItem('.catalog-item__back');
 
-    //modals
+//modals
 
     $('[data-model="consultaion"]').on('click', function () {
         $('.overlay, #consultaion').fadeIn();
@@ -98,13 +103,14 @@ $(document).ready(function () {
     $('form').submit(function (e) {
         e.preventDefault();
 
+//If u'll use localserver, clear uncomment bellow
+
         // if (!$(this).valid()) {
         //     return;
         // }
 
         $.ajax({
             type: "POST",
-            //IF ERROR, CHECK THIS BELOW!!!!
             url: "mailer/smart.php",
             data: $(this).serialize()
         }).done(function() {
@@ -116,7 +122,7 @@ $(document).ready(function () {
         return false;
     });
 
-    //smoth scroll & pageup
+//smoth scroll & pageup
 
     $(window).scroll(function () {
         $('.pageup').fadeIn;
@@ -140,6 +146,9 @@ $(document).ready(function () {
           } 
         });
       });
+
+
+// WOW JS
 
     new WOW().init();
 
